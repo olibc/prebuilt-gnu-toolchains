@@ -1,12 +1,15 @@
-toolchain/build.git              7fe9b270f1b1f0feccee11937216be5fabe94950 Fix 64-bit build of GCC 4.6/4.7 with graphite support
+toolchain/build.git              de36c1312eaf8d1b23a8d79244675f395c361e73 Avoid race condition by "make install -j1" in canadian build->target
 toolchain/gmp.git                e6b9669dafc6a5f83c80b4b4176359b78bccdc90 Add gmp-5.0.5.tar.bz2
-toolchain/mpfr.git               bde731396c38c8d5b0bca800aace6a690d0d2978 add mpfr-2.4.2.tar.bz2
-toolchain/mpc.git                a4109ccc6e07f72f41c397a17fdfbed3e5e19c66 Add mpc-0.8.1 package to toolchain source.
-toolchain/cloog.git              9efba6d305fabb9ecd29dde95c48f27010832824 add cloog-0.16.3.tar.gz
-toolchain/ppl.git                0cdb5d04fefa404debc1bddbb94322f46eb4fd69 Add ppl-0.11.2.tar.bz2
+toolchain/mpfr.git               bfcf1bfa38469208aaad8873cd4c68781061d90f add mpfr-3.1.1.tar.bz2
+toolchain/mpc.git                835d16e92eed875638a8b5d552034c3b1aae045b add mpc-1.0.1.tar.gz
+toolchain/cloog.git              b522eced5dd70c8536c15f044078498658fb9219 add cloog-0.17.0.tar.gz
+toolchain/ppl.git                8ba1875b4c5341d902321761022a6d2a0b5b19a4 add ppl-1.0.tar.bz2
 toolchain/expat.git              40172a0ae9d40a068f1e1a48ffcf6a1ccf765ed5 expat package for building gdb-7.3
-toolchain/binutils.git           dc51c7a5e0e2620dc85e6c9c46027dce94a85e1f Fix gold issue on fsck_msdos build when objects built by ICC
-toolchain/gcc.git                92da119a900b1f73fb7f23fbe1c044a237986741 Merge "Fix ARM GCC 4.6/4.7 fail to links code using 64-bit atomic built-in"
-toolchain/gdb.git                534e6066a5c9ecbac5df305092ab197ada6bb8d0 Re-ISA-tize Thumb dynsyms to fix solib bp SIGILL
-toolchain/clang.git              f2f5aff7d1b9c946946b084faa080dde1d74d706 Add workaround for libstdc++ for C++0x.
-toolchain/llvm.git               95b8007dded354d15113cc0038f12ec62fa2b596 Update the live-ins after lowering tMOVCCr_pseudo.
+toolchain/binutils.git           8415ff0aaeb157307bb01a45373dba81919882fc Merge "Fix the "DIV usage mismatch between blah.o and output" error"
+toolchain/gcc.git                7f9f4477cbebb22723af8c0fac55aefc1228e02c Fix x86 GCC4.7 segfault in i386.c distance_non_agu_define_in_bb()
+toolchain/gdb.git                87c2a8617d772060c22533ed1626fca7f0649ca0 Merge "Fix default isatized_symbol_value handler"
+toolchain/python.git             88d9000040cfe698e8e32e071880ed8b41e11216 Remove *.info
+toolchain/clang.git (release_32) 9d4223132b17b9f647203b886fe09e7555ab9ab6 Misc fixes
+toolchain/llvm.git (release_32)  9854c4870dfec924c4c2fca0b6d406dc1eff4e32 Fix gnustl-shared-1 unit test failure.
+toolchain/clang.git (release_31) 4ee97488c51806ac044ff5b6c70f07d1be8dc339 Leave -fexception alone since it's enabled by default
+toolchain/llvm.git (release_31)  9e9a074a457f0db61a0f7977bbf5e3c4afebe2e0 Fix canadian build
